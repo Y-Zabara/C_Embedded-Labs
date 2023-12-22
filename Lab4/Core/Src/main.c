@@ -84,7 +84,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
             HAL_GPIO_WritePin(GPIOD, LED_BLUE_Pin, GPIO_PIN_RESET);
         }
         // 60-80%
-        else if (adcValue >= 2460 / 5 && adcValue < 3280)
+        else if (adcValue >= 2460 && adcValue < 3280)
         {
             HAL_GPIO_WritePin(GPIOD, LED_GREEN_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(GPIOD, LED_ORANGE_Pin, GPIO_PIN_SET);
